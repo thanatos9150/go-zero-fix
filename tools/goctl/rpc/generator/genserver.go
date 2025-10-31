@@ -64,10 +64,10 @@ func (g *Generator) genServerGroup(ctx DirContext, proto parser.Proto, cfg *conf
 		serverFile = filepath.Join(dir.Filename, serverDir, serverFilename+".go")
 
 		svcImport := fmt.Sprintf(`"%v"`, ctx.GetSvc().Package)
-		pbImport := fmt.Sprintf(`"%v"`, ctx.GetPb().Package)
+		//pbImport := fmt.Sprintf(`"%v"`, ctx.GetPb().Package)
 
 		imports := collection.NewSet[string]()
-		imports.Add(logicImport, svcImport, pbImport)
+		imports.Add(logicImport, svcImport)
 
 		head := util.GetHead(proto.Name)
 
