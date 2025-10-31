@@ -2,6 +2,8 @@ module github.com/thanatos9150/go-zero-fix/tools/goctl
 
 go 1.21
 
+replace github.com/zeromicro/go-zero/tools/goctl => github.com/thanatos9150/go-zero-fix/tools/goctl v1.1.0
+
 require (
 	github.com/DATA-DOG/go-sqlmock v1.5.2
 	github.com/emicklei/proto v1.14.2
