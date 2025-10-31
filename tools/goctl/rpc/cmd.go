@@ -55,6 +55,7 @@ func init() {
 	protocCmdFlags.StringSliceVarP(&cli.VarStringSliceProtoPath, "proto_path", "I")
 	protocCmdFlags.StringVar(&cli.VarStringStyle, "style")
 	protocCmdFlags.StringVar(&cli.VarStringZRPCOut, "zrpc_out")
+	protocCmdFlags.StringVar(&cli.VarStringClientOut, "client_out")
 	protocCmdFlags.StringVar(&cli.VarStringHome, "home")
 	protocCmdFlags.StringVar(&cli.VarStringRemote, "remote")
 	protocCmdFlags.StringVar(&cli.VarStringBranch, "branch")

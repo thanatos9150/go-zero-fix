@@ -38,6 +38,8 @@ var (
 	VarStringStyle string
 	// VarStringZRPCOut describes the zRPC output.
 	VarStringZRPCOut string
+	// VarStringClientOut describes the zRPC output.
+	VarStringClientOut string
 	// VarBoolIdea describes whether idea or not
 	VarBoolIdea bool
 	// VarBoolVerbose describes whether verbose.

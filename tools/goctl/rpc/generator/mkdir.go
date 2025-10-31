@@ -61,7 +61,7 @@ func mkdir(ctx *ctx.ProjectContext, proto parser.Proto, conf *conf.Config, c *ZR
 	error) {
 	inner := make(map[string]Dir)
 	etcDir := filepath.Join(ctx.WorkDir, "etc")
-	clientDir := filepath.Join(ctx.WorkDir, "client")
+	clientDir := filepath.Join(ctx.ClientDir, "client")
 	internalDir := filepath.Join(ctx.WorkDir, "internal")
 	configDir := filepath.Join(internalDir, "config")
 	logicDir := filepath.Join(internalDir, "logic")

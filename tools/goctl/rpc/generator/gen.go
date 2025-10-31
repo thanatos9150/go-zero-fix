@@ -26,6 +26,8 @@ type ZRpcContext struct {
 	GrpcOutput string
 	// Output is the output directory of the generated files.
 	Output string
+	// ClientOutput is the output directory of the generated rpc client files.
+	ClientOutput string
 	// Multiple is the flag to indicate whether the proto file is generated in multiple mode.
 	Multiple bool
 	// Whether to generate rpc client
@@ -48,6 +50,16 @@ func (g *Generator) Generate(zctx *ZRpcContext) error {
 		return err
 	}
 
+	absClient, err := filepath.Abs(zctx.ClientOutput)
+	if err != nil {
+		return err
+	}
+
+	err = pathx.MkdirIfNotExist(absClient)
+	if err != nil {
+		return err
+	}
+
 	err = g.Prepare()
 	if err != nil {
 		return err
@@ -62,6 +74,7 @@ func (g *Generator) Generate(zctx *ZRpcContext) error {
 	if err != nil {
 		return err
 	}
+	projectCtx.ClientDir = absClient
 
 	p := parser.NewDefaultProtoParser()
 	proto, err := p.Parse(zctx.Src, zctx.Multiple)

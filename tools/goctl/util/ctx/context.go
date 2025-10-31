@@ -12,7 +12,8 @@ var errModuleCheck = errors.New("the work directory must be found in the go mod 
 // ProjectContext is a structure for the project,
 // which contains WorkDir, Name, Path and Dir
 type ProjectContext struct {
-	WorkDir string
+	ClientDir string
+	WorkDir   string
 	// Name is the root name of the project
 	// eg: go-zero、greet
 	Name string

@@ -31,6 +31,7 @@ func ZRPC(_ *cobra.Command, args []string) error {
 	grpcOutList := VarStringSliceGoGRPCOut
 	goOutList := VarStringSliceGoOut
 	zrpcOut := VarStringZRPCOut
+	clientOut := VarStringClientOut
 	style := VarStringStyle
 	home := VarStringHome
 	remote := VarStringRemote
@@ -49,6 +50,9 @@ func ZRPC(_ *cobra.Command, args []string) error {
 	}
 	if len(zrpcOut) == 0 {
 		return errInvalidZrpcOutput
+	}
+	if len(clientOut) == 0 {
+		clientOut = zrpcOut
 	}
 	goOutAbs, err := filepath.Abs(goOut)
 	if err != nil {
@@ -79,6 +83,9 @@ func ZRPC(_ *cobra.Command, args []string) error {
 	if !filepath.IsAbs(zrpcOut) {
 		zrpcOut = filepath.Join(pwd, zrpcOut)
 	}
+	if !filepath.IsAbs(clientOut) {
+		clientOut = filepath.Join(pwd, clientOut)
+	}
 
 	isGooglePlugin := len(grpcOut) > 0
 	goOut, err = filepath.Abs(goOut)
@@ -93,6 +100,10 @@ func ZRPC(_ *cobra.Command, args []string) error {
 	if err != nil {
 		return err
 	}
+	clientOut, err = filepath.Abs(clientOut)
+	if err != nil {
+		return err
+	}
 
 	var ctx generator.ZRpcContext
 	ctx.Multiple = VarBoolMultiple
@@ -101,6 +112,7 @@ func ZRPC(_ *cobra.Command, args []string) error {
 	ctx.GrpcOutput = grpcOut
 	ctx.IsGooglePlugin = isGooglePlugin
 	ctx.Output = zrpcOut
+	ctx.ClientOutput = clientOut
 	ctx.ProtocCmd = strings.Join(protocArgs, " ")
 	ctx.IsGenClient = VarBoolClient
 	ctx.Module = VarStringModule
