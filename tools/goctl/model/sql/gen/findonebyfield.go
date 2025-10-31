@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/zeromicro/go-zero/tools/goctl/model/sql/template"
-	"github.com/zeromicro/go-zero/tools/goctl/util"
-	"github.com/zeromicro/go-zero/tools/goctl/util/pathx"
-	"github.com/zeromicro/go-zero/tools/goctl/util/stringx"
+	"github.com/thanatos9150/go-zero-fix/tools/goctl/model/sql/template"
+	"github.com/thanatos9150/go-zero-fix/tools/goctl/util"
+	"github.com/thanatos9150/go-zero-fix/tools/goctl/util/pathx"
+	"github.com/thanatos9150/go-zero-fix/tools/goctl/util/stringx"
 )
 
 type findOneCode struct {

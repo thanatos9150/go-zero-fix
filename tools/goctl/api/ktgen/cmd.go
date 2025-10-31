@@ -4,7 +4,7 @@ import (
 	"errors"
 
 	"github.com/spf13/cobra"
-	"github.com/zeromicro/go-zero/tools/goctl/api/parser"
+	"github.com/thanatos9150/go-zero-fix/tools/goctl/api/parser"
 )
 
 var (

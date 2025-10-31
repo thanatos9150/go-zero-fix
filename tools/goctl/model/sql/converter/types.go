@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"strings"
 
+	"github.com/thanatos9150/go-zero-fix/tools/goctl/config"
+	"github.com/thanatos9150/go-zero-fix/tools/goctl/pkg/env"
 	"github.com/zeromicro/ddl-parser/parser"
-	"github.com/zeromicro/go-zero/tools/goctl/config"
-	"github.com/zeromicro/go-zero/tools/goctl/pkg/env"
 )
 
 var unsignedTypeMap = map[string]string{

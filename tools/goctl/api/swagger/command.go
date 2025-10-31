@@ -8,8 +8,8 @@ import (
 	"strings"
 
 	"github.com/spf13/cobra"
-	"github.com/zeromicro/go-zero/tools/goctl/pkg/parser/api/parser"
-	"github.com/zeromicro/go-zero/tools/goctl/util/pathx"
+	"github.com/thanatos9150/go-zero-fix/tools/goctl/pkg/parser/api/parser"
+	"github.com/thanatos9150/go-zero-fix/tools/goctl/util/pathx"
 	"gopkg.in/yaml.v2"
 )
 

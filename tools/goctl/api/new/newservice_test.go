@@ -7,8 +7,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"github.com/zeromicro/go-zero/tools/goctl/api/gogen"
-	"github.com/zeromicro/go-zero/tools/goctl/config"
+	"github.com/thanatos9150/go-zero-fix/tools/goctl/api/gogen"
+	"github.com/thanatos9150/go-zero-fix/tools/goctl/config"
 )
 
 func TestDoGenProjectWithModule_Integration(t *testing.T) {

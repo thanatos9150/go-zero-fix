@@ -7,9 +7,9 @@ import (
 	"path/filepath"
 	"strings"
 
+	"github.com/thanatos9150/go-zero-fix/tools/goctl/api/parser/g4/gen/api"
+	"github.com/thanatos9150/go-zero-fix/tools/goctl/util/console"
 	"github.com/zeromicro/antlr"
-	"github.com/zeromicro/go-zero/tools/goctl/api/parser/g4/gen/api"
-	"github.com/zeromicro/go-zero/tools/goctl/util/console"
 )
 
 type (

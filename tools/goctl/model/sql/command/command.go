@@ -7,18 +7,18 @@ import (
 
 	"github.com/go-sql-driver/mysql"
 	"github.com/spf13/cobra"
+	"github.com/thanatos9150/go-zero-fix/tools/goctl/config"
+	"github.com/thanatos9150/go-zero-fix/tools/goctl/model/sql/command/migrationnotes"
+	"github.com/thanatos9150/go-zero-fix/tools/goctl/model/sql/gen"
+	"github.com/thanatos9150/go-zero-fix/tools/goctl/model/sql/model"
+	"github.com/thanatos9150/go-zero-fix/tools/goctl/model/sql/util"
+	file "github.com/thanatos9150/go-zero-fix/tools/goctl/util"
+	"github.com/thanatos9150/go-zero-fix/tools/goctl/util/console"
+	"github.com/thanatos9150/go-zero-fix/tools/goctl/util/pathx"
 	"github.com/zeromicro/go-zero/core/collection"
 	"github.com/zeromicro/go-zero/core/logx"
 	"github.com/zeromicro/go-zero/core/stores/postgres"
 	"github.com/zeromicro/go-zero/core/stores/sqlx"
-	"github.com/zeromicro/go-zero/tools/goctl/config"
-	"github.com/zeromicro/go-zero/tools/goctl/model/sql/command/migrationnotes"
-	"github.com/zeromicro/go-zero/tools/goctl/model/sql/gen"
-	"github.com/zeromicro/go-zero/tools/goctl/model/sql/model"
-	"github.com/zeromicro/go-zero/tools/goctl/model/sql/util"
-	file "github.com/zeromicro/go-zero/tools/goctl/util"
-	"github.com/zeromicro/go-zero/tools/goctl/util/console"
-	"github.com/zeromicro/go-zero/tools/goctl/util/pathx"
 )
 
 var (

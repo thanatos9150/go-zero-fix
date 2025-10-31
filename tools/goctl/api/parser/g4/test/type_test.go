@@ -4,8 +4,8 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"github.com/zeromicro/go-zero/tools/goctl/api/parser/g4/ast"
-	"github.com/zeromicro/go-zero/tools/goctl/api/parser/g4/gen/api"
+	"github.com/thanatos9150/go-zero-fix/tools/goctl/api/parser/g4/ast"
+	"github.com/thanatos9150/go-zero-fix/tools/goctl/api/parser/g4/gen/api"
 )
 
 var fieldAccept = func(p *api.ApiParserParser, visitor *ast.ApiVisitor) any {

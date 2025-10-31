@@ -9,8 +9,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/zeromicro/go-zero/tools/goctl/pkg/parser/api/token"
-	"github.com/zeromicro/go-zero/tools/goctl/util/pathx"
+	"github.com/thanatos9150/go-zero-fix/tools/goctl/pkg/parser/api/token"
+	"github.com/thanatos9150/go-zero-fix/tools/goctl/util/pathx"
 )
 
 const (

@@ -6,13 +6,13 @@ import (
 	"path/filepath"
 	"strings"
 
+	conf "github.com/thanatos9150/go-zero-fix/tools/goctl/config"
+	"github.com/thanatos9150/go-zero-fix/tools/goctl/rpc/parser"
+	"github.com/thanatos9150/go-zero-fix/tools/goctl/util"
+	"github.com/thanatos9150/go-zero-fix/tools/goctl/util/format"
+	"github.com/thanatos9150/go-zero-fix/tools/goctl/util/pathx"
+	"github.com/thanatos9150/go-zero-fix/tools/goctl/util/stringx"
 	"github.com/zeromicro/go-zero/core/collection"
-	conf "github.com/zeromicro/go-zero/tools/goctl/config"
-	"github.com/zeromicro/go-zero/tools/goctl/rpc/parser"
-	"github.com/zeromicro/go-zero/tools/goctl/util"
-	"github.com/zeromicro/go-zero/tools/goctl/util/format"
-	"github.com/zeromicro/go-zero/tools/goctl/util/pathx"
-	"github.com/zeromicro/go-zero/tools/goctl/util/stringx"
 )
 
 const logicFunctionTemplate = `{{if .hasComment}}{{.comment}}{{end}}

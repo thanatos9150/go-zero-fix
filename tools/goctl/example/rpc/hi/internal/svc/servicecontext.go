@@ -1,6 +1,6 @@
 package svc
 
-import "github.com/zeromicro/go-zero/tools/goctl/example/rpc/hi/internal/config"
+import "github.com/thanatos9150/go-zero-fix/tools/goctl/example/rpc/hi/internal/config"
 
 type ServiceContext struct {
 	Config config.Config

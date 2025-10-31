@@ -7,8 +7,8 @@ import (
 	"regexp"
 	"text/template"
 
-	"github.com/zeromicro/go-zero/tools/goctl/internal/errorx"
-	"github.com/zeromicro/go-zero/tools/goctl/util/pathx"
+	"github.com/thanatos9150/go-zero-fix/tools/goctl/internal/errorx"
+	"github.com/thanatos9150/go-zero-fix/tools/goctl/util/pathx"
 )
 
 const regularPerm = 0o666

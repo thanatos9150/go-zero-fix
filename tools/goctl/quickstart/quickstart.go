@@ -6,10 +6,10 @@ import (
 	"path/filepath"
 
 	"github.com/spf13/cobra"
+	"github.com/thanatos9150/go-zero-fix/tools/goctl/util/console"
+	"github.com/thanatos9150/go-zero-fix/tools/goctl/util/ctx"
+	"github.com/thanatos9150/go-zero-fix/tools/goctl/util/pathx"
 	"github.com/zeromicro/go-zero/core/logx"
-	"github.com/zeromicro/go-zero/tools/goctl/util/console"
-	"github.com/zeromicro/go-zero/tools/goctl/util/ctx"
-	"github.com/zeromicro/go-zero/tools/goctl/util/pathx"
 )
 
 const baseDir = "greet"

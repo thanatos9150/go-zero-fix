@@ -1,6 +1,6 @@
 package tpl
 
-import "github.com/zeromicro/go-zero/tools/goctl/internal/cobrax"
+import "github.com/thanatos9150/go-zero-fix/tools/goctl/internal/cobrax"
 
 var (
 	varStringHome     string

@@ -5,11 +5,11 @@ import (
 	"os"
 	"path/filepath"
 
+	"github.com/thanatos9150/go-zero-fix/tools/goctl/api/gogen"
+	"github.com/thanatos9150/go-zero-fix/tools/goctl/pkg/golang"
+	"github.com/thanatos9150/go-zero-fix/tools/goctl/util"
+	"github.com/thanatos9150/go-zero-fix/tools/goctl/util/pathx"
 	"github.com/zeromicro/go-zero/core/logx"
-	"github.com/zeromicro/go-zero/tools/goctl/api/gogen"
-	"github.com/zeromicro/go-zero/tools/goctl/pkg/golang"
-	"github.com/zeromicro/go-zero/tools/goctl/util"
-	"github.com/zeromicro/go-zero/tools/goctl/util/pathx"
 )
 
 var (

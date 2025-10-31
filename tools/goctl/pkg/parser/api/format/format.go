@@ -5,7 +5,7 @@ import (
 	"io"
 	"os"
 
-	"github.com/zeromicro/go-zero/tools/goctl/pkg/parser/api/parser"
+	"github.com/thanatos9150/go-zero-fix/tools/goctl/pkg/parser/api/parser"
 )
 
 // File formats the api file.

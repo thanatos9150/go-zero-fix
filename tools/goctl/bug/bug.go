@@ -7,7 +7,7 @@ import (
 	"runtime"
 
 	"github.com/spf13/cobra"
-	"github.com/zeromicro/go-zero/tools/goctl/internal/version"
+	"github.com/thanatos9150/go-zero-fix/tools/goctl/internal/version"
 )
 
 const (

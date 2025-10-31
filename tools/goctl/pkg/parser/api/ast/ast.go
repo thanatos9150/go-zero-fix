@@ -5,8 +5,8 @@ import (
 	"io"
 	"strings"
 
-	"github.com/zeromicro/go-zero/tools/goctl/pkg/parser/api/token"
-	"github.com/zeromicro/go-zero/tools/goctl/util"
+	"github.com/thanatos9150/go-zero-fix/tools/goctl/pkg/parser/api/token"
+	"github.com/thanatos9150/go-zero-fix/tools/goctl/util"
 )
 
 // Node represents a node in the AST.
