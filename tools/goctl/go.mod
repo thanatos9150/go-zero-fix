@@ -1,4 +1,4 @@
-module github.com/zeromicro/go-zero/tools/goctl
+module github.com/thanatos9150/go-zero-fix/tools/goctl
 
 go 1.21
 
