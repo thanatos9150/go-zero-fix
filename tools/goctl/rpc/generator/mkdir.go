@@ -1,6 +1,7 @@
 package generator
 
 import (
+	"fmt"
 	"path/filepath"
 	"strings"
 
@@ -174,6 +175,7 @@ func mkdir(ctx *ctx.ProjectContext, proto parser.Proto, conf *conf.Config, c *ZR
 		},
 	}
 
+	fmt.Println(ctx.Dir, ctx.Path)
 	inner[pb] = Dir{
 		Filename: pbDir,
 		Package:  filepath.ToSlash(filepath.Join(ctx.Path, strings.TrimPrefix(pbDir, ctx.Dir))),
