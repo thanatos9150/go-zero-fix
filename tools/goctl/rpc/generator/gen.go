@@ -1,6 +1,7 @@
 package generator
 
 import (
+	"fmt"
 	"path/filepath"
 
 	"github.com/thanatos9150/go-zero-fix/tools/goctl/rpc/parser"
@@ -75,6 +76,18 @@ func (g *Generator) Generate(zctx *ZRpcContext) error {
 		return err
 	}
 	projectCtx.ClientDir = absClient
+	if projectCtx.ClientDir != "" {
+		var clientCtx *ctx.ProjectContext
+		if len(zctx.Module) > 0 {
+			clientCtx, err = ctx.PrepareWithModule(absClient, zctx.Module)
+		} else {
+			clientCtx, err = ctx.Prepare(absClient)
+		}
+		if err != nil {
+			return err
+		}
+		projectCtx.ClientPath = clientCtx.Path
+	}
 
 	p := parser.NewDefaultProtoParser()
 	proto, err := p.Parse(zctx.Src, zctx.Multiple)

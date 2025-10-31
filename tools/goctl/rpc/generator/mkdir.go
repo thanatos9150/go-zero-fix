@@ -1,7 +1,6 @@
 package generator
 
 import (
-	"fmt"
 	"path/filepath"
 	"strings"
 
@@ -175,7 +174,6 @@ func mkdir(ctx *ctx.ProjectContext, proto parser.Proto, conf *conf.Config, c *ZR
 		},
 	}
 
-	fmt.Println(ctx.Dir, ctx.Path)
 	inner[pb] = Dir{
 		Filename: pbDir,
 		Package:  filepath.ToSlash(filepath.Join(ctx.Path, strings.TrimPrefix(pbDir, ctx.Dir))),
@@ -210,17 +208,26 @@ func mkdir(ctx *ctx.ProjectContext, proto parser.Proto, conf *conf.Config, c *ZR
 }
 
 func (d *defaultDirContext) SetPbDir(pbDir, grpcDir string) {
+	pbPath := d.ctx.Path
+	baseDir := d.ctx.Dir
+	if d.ctx.ClientPath != "" {
+		pbPath = d.ctx.ClientPath
+		baseDir = d.ctx.ClientDir
+	}
+	//fmt.Println("pbDir:", pbDir)
+	//fmt.Println("ctx.Dir:", d.ctx.Dir)
+	//fmt.Println("ctx.ClientDir:", d.ctx.ClientDir)
+
 	d.inner[pb] = Dir{
 		Filename: pbDir,
-		Package:  filepath.ToSlash(filepath.Join(d.ctx.Path, strings.TrimPrefix(pbDir, d.ctx.Dir))),
+		Package:  filepath.ToSlash(filepath.Join(pbPath, strings.TrimPrefix(pbDir, baseDir))),
 		Base:     filepath.Base(pbDir),
 	}
 
 	d.inner[protoGo] = Dir{
 		Filename: grpcDir,
-		Package: filepath.ToSlash(filepath.Join(d.ctx.Path,
-			strings.TrimPrefix(grpcDir, d.ctx.Dir))),
-		Base: filepath.Base(grpcDir),
+		Package:  filepath.ToSlash(filepath.Join(pbPath, strings.TrimPrefix(grpcDir, baseDir))),
+		Base:     filepath.Base(grpcDir),
 	}
 }
 
