@@ -1,7 +1,6 @@
 package generator
 
 import (
-	"fmt"
 	"path/filepath"
 
 	"github.com/thanatos9150/go-zero-fix/tools/goctl/rpc/parser"
