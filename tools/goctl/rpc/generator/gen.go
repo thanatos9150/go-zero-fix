@@ -50,14 +50,17 @@ func (g *Generator) Generate(zctx *ZRpcContext) error {
 		return err
 	}
 
-	absClient, err := filepath.Abs(zctx.ClientOutput)
-	if err != nil {
-		return err
-	}
+	var absClient string
+	if zctx.ClientOutput != "" {
+		absClient, err = filepath.Abs(zctx.ClientOutput)
+		if err != nil {
+			return err
+		}
 
-	err = pathx.MkdirIfNotExist(absClient)
-	if err != nil {
-		return err
+		err = pathx.MkdirIfNotExist(absClient)
+		if err != nil {
+			return err
+		}
 	}
 
 	err = g.Prepare()
@@ -74,8 +77,9 @@ func (g *Generator) Generate(zctx *ZRpcContext) error {
 	if err != nil {
 		return err
 	}
-	projectCtx.ClientDir = absClient
-	if projectCtx.ClientDir != "" {
+
+	if absClient != "" {
+		projectCtx.ClientDir = absClient
 		var clientCtx *ctx.ProjectContext
 		if len(zctx.Module) > 0 {
 			clientCtx, err = ctx.PrepareWithModule(absClient, zctx.Module)

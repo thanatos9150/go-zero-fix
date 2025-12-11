@@ -100,6 +100,7 @@ func ZRPC(_ *cobra.Command, args []string) error {
 	if err != nil {
 		return err
 	}
+
 	clientOut, err = filepath.Abs(clientOut)
 	if err != nil {
 		return err
@@ -112,7 +113,9 @@ func ZRPC(_ *cobra.Command, args []string) error {
 	ctx.GrpcOutput = grpcOut
 	ctx.IsGooglePlugin = isGooglePlugin
 	ctx.Output = zrpcOut
-	ctx.ClientOutput = clientOut
+	if VarStringClientOut != "" {
+		ctx.ClientOutput = clientOut
+	}
 	ctx.ProtocCmd = strings.Join(protocArgs, " ")
 	ctx.IsGenClient = VarBoolClient
 	ctx.Module = VarStringModule

@@ -215,8 +215,9 @@ func (d *defaultDirContext) SetPbDir(pbDir, grpcDir string) {
 		baseDir = d.ctx.ClientDir
 	}
 	//fmt.Println("pbDir:", pbDir)
-	//fmt.Println("ctx.Dir:", d.ctx.Dir)
-	//fmt.Println("ctx.ClientDir:", d.ctx.ClientDir)
+	//fmt.Println("pbPath:", pbPath)
+	//fmt.Println("baseDir:", baseDir)
+	//fmt.Println("ctx.ClientPath:", d.ctx.ClientPath)
 
 	d.inner[pb] = Dir{
 		Filename: pbDir,
